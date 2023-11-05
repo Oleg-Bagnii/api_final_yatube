@@ -3,6 +3,7 @@ from django.db import models
 
 User = get_user_model()
 
+
 class Follow(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE,
@@ -12,6 +13,7 @@ class Follow(models.Model):
         User, on_delete=models.CASCADE,
         related_name='user'
     )
+
 
 class Group(models.Model):
     title = models.CharField(verbose_name='Заголовок',

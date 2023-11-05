@@ -3,12 +3,17 @@ from rest_framework.validators import UniqueTogetherValidator
 
 from posts.models import Comment, Follow, Group, Post, User
 
+
 class FollowSerializer(serializers.ModelSerializer):
-    user = serializers.SlugRelatedField(slug_field='username',
-                                        queryset=User.objects.all(),
-                                        default=serializers.CurrentUserDefault())
-    following = serializers.SlugRelatedField(slug_field='username',
-                                        queryset=User.objects.all())
+    user = serializers.SlugRelatedField(
+        slug_field='username',
+        queryset=User.objects.all(),
+        default=serializers.CurrentUserDefault()
+        )
+    following = serializers.SlugRelatedField(
+        slug_field='username',
+        queryset=User.objects.all()
+        )
 
     def validate(self, data):
         if data['user'] == data['following']:
