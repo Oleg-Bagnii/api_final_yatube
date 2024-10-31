@@ -7,11 +7,11 @@
 Перед запуском необходимо склонировать проект:
 
 ```
-git clone https://github.com/yandex-praktikum/kittygram.git
+git clone https://github.com/Oleg-Bagnii/api_final_yatube.git
 ```
 
 ```
-cd kittygram
+cd api_final_yatube
 ```
 
 Cоздать и активировать виртуальное окружение:
